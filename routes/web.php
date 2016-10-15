@@ -22,3 +22,12 @@ Route::get('/', function () {
 Route::get('home', 'PagesController@home');
 
 Route::get('about', 'PagesController@about');
+
+// Cards Routes
+Route::get('cards', 'CardsController@index');
+Route::get('cards/create', 'CardsController@create');
+Route::post('cards', 'CardsController@store');
+Route::get('cards/{card}', 'CardsController@show');
+Route::get('cards/{card}/edit', 'CardsController@edit');
+Route::put('cards/{card}', 'CardsController@update');
+Route::delete('cards/{card}', 'CardsController@destroy');
