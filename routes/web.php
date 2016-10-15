@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('pages.welcome');
+	$people = ['Taylor', 'Matt', 'Jeffrey'];
+	
+    return view('pages.welcome', ['people' => $people]);
+    //return view('pages.welcome')->with('people', $people);
+    //return view('welcome')->withPeople($people);
 });
 
 Route::get('home', 'PageController@home');
