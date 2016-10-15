@@ -39,10 +39,10 @@ class CardsController extends Controller
 
         // Without route-model binding.
         // $card = Card::find($card);
-        //return view('cards.show', compact('card'));
+        return view('cards.show', compact('card'));
         
         // With implicit model binding, ensure you type hint the method's parameter, as above.
-        return $card;
+        //return $card;
     }
 
     public function edit()
