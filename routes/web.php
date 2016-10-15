@@ -31,3 +31,6 @@ Route::get('cards/{card}', 'CardsController@show');
 Route::get('cards/{card}/edit', 'CardsController@edit');
 Route::put('cards/{card}', 'CardsController@update');
 Route::delete('cards/{card}', 'CardsController@destroy');
+
+// Notes Routes
+Route::post('cards/{card}/notes', 'NotesController@store');
