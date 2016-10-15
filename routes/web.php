@@ -13,14 +13,12 @@
 
 Route::get('/', function () {
 	$people = ['Taylor', 'Matt', 'Jeffrey'];
-	
+
     return view('pages.welcome', ['people' => $people]);
     //return view('pages.welcome')->with('people', $people);
     //return view('welcome')->withPeople($people);
 });
 
-Route::get('home', 'PageController@home');
+Route::get('home', 'PagesController@home');
 
-Route::get('about', function() {
-	return view('pages.about');
-});
+Route::get('about', 'PagesController@about');
