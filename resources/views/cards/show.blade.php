@@ -8,7 +8,7 @@
 			<h2>Notes</h2>
 			<ol class="list-group">
 			@foreach ($card->notes as $note)
-				<li class="list-group-item">{{ $note->body }}</li>
+				<li class="list-group-item">{{ $note->body }} (by {{ $note->user->username }})<a class="pull-right" href="/notes/{{ $note->id }}/edit">Edit</a></li>
 			@endforeach
 			</ol>
 
