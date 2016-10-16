@@ -12,9 +12,9 @@ class NotesController extends Controller
 {
     public function store(Request $request, Card $card)
     {
-    	// Option #1
-    	// $note = new Note;
-    	// $note->body = $request->body;
+    	$note = new Note;
+    	$note->body = $request->body;
+        // Option #1
     	// $card->notes()->save($note);
 
     	// Option #2
@@ -26,6 +26,7 @@ class NotesController extends Controller
     	// Option #4
     	// $card->notes()->create($request->all());
 
+        $card->addNote($note);
 
     	return back();
     }
