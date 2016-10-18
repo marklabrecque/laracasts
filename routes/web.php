@@ -36,3 +36,9 @@ Route::delete('cards/{card}', 'CardsController@destroy');
 Route::post('cards/{card}/notes', 'NotesController@store');
 Route::get('/notes/{note}/edit', 'NotesController@edit');
 Route::patch('/notes/{note}', 'NotesController@update');
+
+// Flashing ot the session.
+Route::get('flash', function() {
+  Session::flash('status', 'This is a flash message.');
+  return redirect('/');
+});
